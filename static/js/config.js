@@ -1,7 +1,7 @@
 window.__CONFIG__ = (function(){
   var defaults = {
     GA_ID: "G-1X87PXCSCX",
-    META_PIXEL_ID: "",
+    META_PIXEL_ID: "26672104889057983",
     CHECKOUT_URL: "https://pay.cakto.com.br/33emkhp_732561",
     FLOW_NAME: "ebook",
     FLOW_URL: "https://ocodigododespertar.vercel.app/",
