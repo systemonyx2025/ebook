@@ -1,8 +1,8 @@
 window.config = {
-  GA_ID: 'G-1X87PXCSCX',
-  META_PIXEL_ID: '26672104889057983',
+  GA_ID: 'G-RN4NB0DBXX',
+  META_PIXEL_ID: '1460937748732276',
   CHECKOUT_URL: 'https://pay.cakto.com.br/33zwtrw_739399',
   FLOW_NAME: 'ebook',
   STREAM_ID: '13330867318',
-  VERCEL_DOMAIN: 'https://ocodigododespertar.vercel.app/'
+  VERCEL_DOMAIN: 'academiasemvergonha.vercel.app/'
 };
