@@ -11,50 +11,37 @@
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/png" href="./static/img/favicon.png" />
     <link rel="stylesheet" href="./static/css/styles.css" />
-    <link id="canonical-link" rel="canonical" href="academiasemvergonha.vercel.app/">
-    <!-- Analytics Injection -->
-     
-    <script src="./static/js/config.js"></script>
+    <link id="canonical-link" rel="canonical" href="https://academiasemvergonha.vercel.app/">
+    
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN4NB0DBXX"></script>
     <script>
-      // Apply Config
-      if (window.config) {
-        // Update Canonical URL
-        if (window.config.VERCEL_DOMAIN) {
-          const canonical = document.getElementById('canonical-link') || document.createElement('link');
-          canonical.id = 'canonical-link';
-          canonical.rel = 'canonical';
-          canonical.href = window.config.VERCEL_DOMAIN;
-          if (!canonical.parentElement) document.head.appendChild(canonical);
-        }
-
-        // Google Analytics (GA4)
-      if (window.config && window.config.GA_ID) {
-        const gaScript = document.createElement('script');
-        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.config.GA_ID}`;
-        gaScript.async = true;
-        document.head.appendChild(gaScript);
-        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', window.config.GA_ID);
-      }
-
-      // Meta Pixel
-      if (window.config && window.config.META_PIXEL_ID) {
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        fbq('init', window.config.META_PIXEL_ID);
-        fbq('track', 'PageView');
-      }
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RN4NB0DBXX');
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1460937748732276');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1460937748732276&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Config (Checkout & other settings) -->
+    <script src="./static/js/config.js"></script>
   </head>
   <body>
     <main class="container">
