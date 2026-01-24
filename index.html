@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academia Sem Vergonha | Comece com segurança</title>
+    <meta name="description" content="Um teste rápido para mulheres que querem emagrecer, se sentir confiantes e parar de desistir da academia." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Academia Sem Vergonha" />
+    <meta property="og:description" content="Um teste rápido para mulheres que querem emagrecer, se sentir confiantes e parar de desistir da academia." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="./static/img/favicon.png" />
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <link id="canonical-link" rel="canonical" href="https://ocodigododespertar.vercel.app/">
+    <!-- Analytics Injection -->
+    <script src="./static/js/config.js"></script>
+    <script>
+      // Apply Config
+      if (window.config) {
+        // Update Canonical URL
+        if (window.config.VERCEL_DOMAIN) {
+          const canonical = document.getElementById('canonical-link') || document.createElement('link');
+          canonical.id = 'canonical-link';
+          canonical.rel = 'canonical';
+          canonical.href = window.config.VERCEL_DOMAIN;
+          if (!canonical.parentElement) document.head.appendChild(canonical);
+        }
+
+        // Google Analytics (GA4)
+      if (window.config && window.config.GA_ID) {
+        const gaScript = document.createElement('script');
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.config.GA_ID}`;
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', window.config.GA_ID);
+      }
+
+      // Meta Pixel
+      if (window.config && window.config.META_PIXEL_ID) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        fbq('init', window.config.META_PIXEL_ID);
+        fbq('track', 'PageView');
+      }
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1 class="hero-title">Descubra em 1 minuto o que está te travando na academia</h1>
+        <p class="hero-sub">Um teste rápido para mulheres que querem emagrecer, se sentir confiantes e parar de desistir da academia.</p>
+        <button id="startBtn" class="btn btn-primary btn-lg pulse">Começar o teste agora</button>
+      </section>
+
+      <section id="quiz" class="quiz hidden">
+        <div class="quiz-header">
+          <!-- Timer removed -->
+        </div>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="progressLabel" class="label" style="margin-top: 8px;">Pergunta 1 de 5</p>
+        
+        <div id="questionCard" class="card fade-scale-enter">
+          <h2 id="questionText" class="card-title"></h2>
+          <div id="options" class="options"></div>
+          <div class="card-actions">
+            <button id="backBtn" class="btn btn-ghost" disabled>Voltar</button>
+            <button id="nextBtn" class="btn btn-primary" disabled>Avançar</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="result" class="result hidden">
+        <div class="checkout-card">
+          <div class="checkout-header">
+            <p class="checkout-subtitle">DISPONÍVEL POR TEMPO LIMITADO</p>
+          </div>
+          
+          <div class="checkout-content">
+            <div class="result-summary">
+              <h2 id="resultTitle" class="result-title">O seu problema NÃO é falta de força de vontade.</h2>
+              <p id="resultDesc" class="result-desc">É falta de direção e segurança no começo. A maioria das mulheres desiste da academia porque entra sem saber o que fazer, se sente perdida, insegura e acaba se cobrando demais.</p>
+              <p class="result-desc">A boa notícia é que isso tem solução — e ela é mais simples do que parece.</p>
+            </div>
+
+            <div class="ebook-showcase">
+              <img src="./static/img/ebook-mockup.png" alt="Academia Sem Vergonha - Guia Prático" class="ebook-img">
+            </div>
+
+            <div class="offer-box">
+              <h3 class="offer-title">Academia Sem Vergonha</h3>
+              <p class="offer-desc">Um eBook prático para mulheres iniciantes que querem:</p>
+              <ul class="list">
+                <li><span class="dot"></span><span>Começar na academia com segurança</span></li>
+                <li><span class="dot"></span><span>Emagrecer sem radicalismo</span></li>
+                <li><span class="dot"></span><span>Criar constância mesmo sem motivação</span></li>
+              </ul>
+              
+              <div class="price-tag">
+                <p class="price-label">GARANTA O ACESSO POR 5X DE</p>
+                <p class="price-value">R$ 5,52</p>
+                <p class="price-sub">OU R$ 23,50 À VISTA</p>
+              </div>
+
+              <div class="cta">
+                <a id="ctaBtn" href="#" class="btn btn-primary btn-lg pulse btn-block">QUERO COMEÇAR SEM MEDO</a>
+                <p class="support">🔒 Compra 100% Segura • Acesso Imediato</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./static/js/analytics.js"></script>
+    <script src="./static/js/quiz.js"></script>
+  </body>
+</html>
